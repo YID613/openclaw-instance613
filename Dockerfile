@@ -1,4 +1,5 @@
 FROM ghcr.io/openclaw/openclaw:latest
-EXPOSE 10000
 ENV PORT=10000
-CMD ["node", "openclaw.mjs", "gateway", "--allow-unconfigured"]
+ENV OPENCLAW_GATEWAY_PORT=10000
+EXPOSE 10000
+CMD ["node", "openclaw.mjs", "gateway", "run", "--host", "0.0.0.0", "--port", "10000"]
