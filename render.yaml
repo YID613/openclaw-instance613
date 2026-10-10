@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: openclaw-instance
+    env: docker
+    plan: free
+    branch: main
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
